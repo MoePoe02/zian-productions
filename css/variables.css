@@ -1,0 +1,86 @@
+/* ==========================================================================
+   ZIAN PRODUCTIONS — DESIGN TOKENS & SYSTEM VARIABLES
+   Swiss International Style / Bento / Kinetic
+   ========================================================================== */
+
+:root {
+  /* ─── Paleta de Colores Oficial Zian ─── */
+  /* Fondos */
+  --color-bg-white:        #FFFFFF;              /* Secciones claras (40%) */
+  --color-bg-ice:          #F4F6F8;              /* Fondo suave editorial (20%) */
+  --color-bg-dark:         #35363A;              /* Bloques oscuros: Hero, Portfolio, Footer (30%) */
+  --color-bg-dark-deep:    #232428;              /* Fondo profundo / contrastes oscuros */
+  --color-bg-dark-card:    #2d2e32;              /* Tarjetas en fondo oscuro */
+
+  /* Textos */
+  --color-text-dark:       #232428;              /* Gris Grafito para fondos claros */
+  --color-text-body:       #4A4C52;              /* Cuerpo editorial legible */
+  --color-text-muted:      #7A7E87;              /* Textos secundarios / metadata */
+  --color-text-light:      #FFFFFF;              /* Blanco puro sobre fondos oscuros */
+  --color-text-light-sub:  rgba(255, 255, 255, 0.76); /* Secundario sobre oscuro */
+  --color-text-light-mute: rgba(255, 255, 255, 0.45); /* Muted sobre oscuro */
+
+  /* Acento Primario — Cian Zian */
+  --color-accent:          #00ADEF;              /* Cian Zian Base */
+  --color-accent-hover:    #0095D0;              /* Hover reactivo */
+  --color-accent-active:   #007EB5;              /* Estado presionado */
+  --color-accent-light:    rgba(0, 173, 239, 0.08); /* Tintes suaves para tags/hover */
+  --color-accent-tint-15:  rgba(0, 173, 239, 0.15); /* Tintes bordes interactivos */
+  --color-accent-glow:     rgba(0, 173, 239, 0.35); /* Glow sutil técnico */
+  --color-accent-gradient: linear-gradient(135deg, #00ADEF 0%, #0087BF 100%);
+
+  /* Bordes & Líneas Editoriales (Estilo Grilla Suiza) */
+  --color-border-light:    #E2E8F0;              /* Gris Perla sobre fondos claros */
+  --color-border-strong:   #CBD5E1;              /* Borde marcado en claros */
+  --color-border-dark:     rgba(255, 255, 255, 0.12); /* Divisores sobre bloques oscuros */
+  --color-border-dark-hover: rgba(0, 173, 239, 0.6); /* Borde cian hover en oscuro */
+
+  /* Estados Funcionales */
+  --color-success:         #10B981;
+  --color-warning:         #F59E0B;
+  --color-error:           #EF4444;
+
+  /* ─── Tipografía Suiza ─── */
+  --font-display:          'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:             'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:             'JetBrains Mono', monospace;
+
+  /* Escala Tipográfica Fluida (Clamp) */
+  --fs-hero:               clamp(3.2rem, 7.5vw, 7.2rem);
+  --fs-h1:                 clamp(2.5rem, 5vw, 4.8rem);
+  --fs-h2:                 clamp(1.9rem, 3.5vw, 3.2rem);
+  --fs-h3:                 clamp(1.3rem, 2vw, 1.9rem);
+  --fs-body-lg:            clamp(1.05rem, 1.2vw, 1.25rem);
+  --fs-body:               1rem;
+  --fs-sm:                 0.875rem;
+  --fs-xs:                 0.75rem;
+  --fs-mono-stat:          clamp(2.8rem, 6vw, 5.5rem);
+
+  /* Espaciado & Grilla Suiza */
+  --grid-gutter:           24px;
+  --section-padding-y:     clamp(5rem, 10vw, 9rem);
+  --container-max-width:   1440px;
+  --container-padding-x:   clamp(1.5rem, 4vw, 4rem);
+
+  /* Layout & Z-Index */
+  --z-base:                1;
+  --z-sticky:              50;
+  --z-header:              100;
+  --z-cursor:              9999;
+  --z-modal:               2000;
+
+  /* Transiciones & Easing Suizo / Cinematográfico */
+  --ease-out-expo:         cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-circ:      cubic-bezier(0.85, 0, 0.15, 1);
+  --duration-fast:         0.2s;
+  --duration-normal:       0.35s;
+  --duration-slow:         0.65s;
+
+  /* Curvaturas de Bordes Redondeados (Non-Image Elements) */
+  --radius-xs:             6px;
+  --radius-sm:             10px;
+  --radius-md:             14px;
+  --radius-lg:             18px;
+  --radius-xl:             24px;
+  --radius-full:           9999px;
+}

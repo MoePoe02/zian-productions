@@ -1,0 +1,94 @@
+/* ==========================================================================
+   ZIAN PRODUCTIONS — KINETIC & SCROLL ANIMATIONS
+   GSAP & CSS Keyframes & Smooth Reveals
+   ========================================================================== */
+
+/* ─── Kinetic Text Splits ─── */
+.kinetic-line-wrap {
+  overflow: hidden;
+  display: block;
+}
+
+.kinetic-char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* ─── Scroll Reveal Classes ─── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.reveal-fade.is-revealed {
+  opacity: 1;
+}
+
+.reveal-clip {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: clip-path 0.9s var(--ease-out-expo);
+}
+
+.reveal-clip.is-revealed {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ─── Subtle Tech Glow & Micro-animations ─── */
+@keyframes cianGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 173, 239, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(0, 173, 239, 0.55);
+  }
+}
+
+.pulse-glow {
+  animation: cianGlowPulse 3s infinite ease-in-out;
+}
+
+/* Marquee track if used for infinite ticker */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 25s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ─── Accessibility Support ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-on-scroll,
+  .reveal-fade,
+  .reveal-clip {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
